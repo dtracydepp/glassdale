@@ -1,7 +1,8 @@
-import { Criminal } from "./Criminal.js"
-import { getCriminals } from "./CriminalDataProvider.js"
-import { getOfficers } from "./OfficerProvider.js"
 
-getOfficers()
+import { getCriminals, useCriminals } from "./CriminalDataProvider.js"
+import { CriminalList } from "./CriminalList.js"
+// import { getOfficers } from "./OfficerProvider.js"
+
+CriminalList ()
 getCriminals()
-Criminal()
+useCriminals()
