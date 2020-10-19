@@ -1,4 +1,5 @@
 
+import { getConvictions, useConvictions } from "./ConvictionsProvider.js"
 import { getCriminals, useCriminals } from "./CriminalDataProvider.js"
 import { CriminalList } from "./CriminalList.js"
 import { OfficerList } from "./OfficerList.js"
@@ -12,3 +13,5 @@ OfficerList()
 getOfficers()
 useOfficers()
 
+getConvictions()
+useConvictions()
