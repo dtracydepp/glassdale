@@ -41,6 +41,10 @@ eventHub.addEventListener("crimeSelected", event  => {
     console.log("filteredCriminalArray", filteredCriminalArray)
 
     render(filteredCriminalArray)
+    
+} else {
+    const criminalArray=useCriminals()
+    render(criminalArray) 
 }
 })
 
