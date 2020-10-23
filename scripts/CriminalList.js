@@ -11,47 +11,47 @@ export const CriminalList = () => {
         .then(() => {
             const criminalArray = useCriminals()
 
-           render (criminalArray)
+            render(criminalArray)
         })
-    }
+}
 
-eventHub.addEventListener("crimeSelected", event  => {
+eventHub.addEventListener("crimeSelected", event => {
     console.log("crimeSelected event happened", event.detail.crimeThatWasChosen)
 
     if (event.detail.crimeThatWasChosen !== 0) {
 
 
-    const criminalArray = useCriminals ()
-    console.log("array of criminals", criminalArray)
+        const criminalArray = useCriminals()
+        console.log("array of criminals", criminalArray)
 
-    const convictionsArray = useConvictions()
-    console.log("array of convictions", convictionsArray)
+        const convictionsArray = useConvictions()
+        console.log("array of convictions", convictionsArray)
 
-    const convictionThatWasChosen = convictionsArray.find(convictionObj => {
-       
-       return convictionObj.id === parseInt(event.detail.crimeThatWasChosen)
-        
-    })
-    console.log("convicitionThatWasChosen", convictionThatWasChosen)
+        const convictionThatWasChosen = convictionsArray.find(convictionObj => {
 
-    // Filter
-    const filteredCriminalArray = criminalArray.filter(criminalObj => {
-        return criminalObj.conviction === convictionThatWasChosen.name
-    })
-    console.log("filteredCriminalArray", filteredCriminalArray)
+            return convictionObj.id === event.detail.crimeThatWasChosen
 
-    render(filteredCriminalArray)
-    
-} else {
-    const criminalArray=useCriminals()
-    render(criminalArray) 
-}
+        })
+        console.log("convicitionThatWasChosen", convictionThatWasChosen)
+
+        // Filter
+        const filteredCriminalArray = criminalArray.filter(criminalObj => {
+            return criminalObj.conviction === convictionThatWasChosen.name
+        })
+        console.log("filteredCriminalArray", filteredCriminalArray)
+
+        render(filteredCriminalArray)
+
+    } else {
+        const criminalArray = useCriminals()
+        render(criminalArray)
+    }
 })
 
-    // render to the DOM
+// render to the DOM
 
- 
-    
+
+
 
 const render = (criminalArray) => {
     let criminalsHTMLRepresentations = ""
