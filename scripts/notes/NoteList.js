@@ -34,7 +34,7 @@ const render = (notesArray, criminalsArray) => {
     `
 }
 
-const eventHub = document.querySelector(".container")
+
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteNote--")) {
