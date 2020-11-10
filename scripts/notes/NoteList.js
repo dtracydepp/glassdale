@@ -1,5 +1,5 @@
 import { getCriminals, useCriminals } from '../CriminalDataProvider.js';
-import {NoteAsHTML} from './Note.js'
+import {NoteAsHTML} from './Note.js';
 import {getNotes, useNotes, deleteNote} from './NotesDataProvider.js'
 
 // Get the notes from the api, iterate the notes array with HTML representations and render notes to the notes container to the DOM.
