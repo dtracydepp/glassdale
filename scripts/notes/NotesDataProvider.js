@@ -21,8 +21,8 @@ export const useNotes = () => {
     return notes.slice()
 }
 // Error message with this code..go back to td-notesdatabase branch to correct
-export const saveNote = note => {
-    return fetch('http://localhost:8088/notes', {
+export const saveNote =(note) => {
+return fetch('http://localhost:8088/notes', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -30,5 +30,5 @@ export const saveNote = note => {
         body: JSON.stringify(note)
     })
     .then(getNotes)
-    .then(dispatchStateChangeEvent) 
+    .then(dispatchStateChangeEvent)
 }
