@@ -7,10 +7,14 @@ import { useConvictions } from "../convictions_/ConvictionsProvider.js"
 const criminalsContainer = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
+let facilities = []
+let criminals = []
+let crimFac = []
 
 export const CriminalList = () => {
     // Kick off the fetching of both collections of data
-    getFacilities()
+    getCriminals()
+        .then(getFacilities)
         .then(getCriminalFacilities)
         .then(
             () => {
@@ -59,9 +63,9 @@ eventHub.addEventListener("crimeSelected", event => {
         const filteredCriminalArray = criminalArray.filter(criminalObj => {
             return criminalObj.conviction === convictionThatWasChosen.name
         })
-        console.log("filteredCriminalArray", filteredCriminalArray)
+        // console.log("filteredCriminalArray", filteredCriminalArray)
 
-        render(filteredCriminalArray)
+        render(filteredCriminalArray,facilities, crimFac)
 
     } else {
         const criminalArray = useCriminals()
@@ -124,9 +128,9 @@ eventHub.addEventListener("officerSelected", officerSelectedEventObj => {
           return false
       })
   
-    console.log("CriminalList: Array of criminals filtered for only the criminals that were arrested by selected officer",filteredArrayCriminals)
+    // console.log("CriminalList: Array of criminals filtered for only the criminals that were arrested by selected officer",filteredArrayCriminals)
 
-    render(filteredArrayCriminals)
+    render(filteredArrayCriminals,facilities, crimFac)
     console.log("CriminalList:Filtered list of criminals rendered to DOM")
 })
 

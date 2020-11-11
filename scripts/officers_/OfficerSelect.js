@@ -12,7 +12,7 @@ export const OfficerSelect = () => {
     getOfficers()
       .then(() => {
         const officersArray = useOfficers()
-        console.log("officersArrays", officersArray)
+        // console.log("officersArrays", officersArray)
   
         render(officersArray)
       })
@@ -25,7 +25,7 @@ const render = (officers) => {
               <option value="0">Please select an officer...</option>
               ${officers.map(
       officerObj => {
-          console.log(officerObj)
+          // console.log(officerObj)
         return `<option value="${officerObj.name}">${officerObj.name}</option>`
       }
     ).join("")
