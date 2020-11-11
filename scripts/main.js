@@ -10,6 +10,7 @@ import { NoteList } from "./notes/NoteList.js"
 import { OfficerList } from "./officers_/OfficerList.js"
 // import { getOfficers, useOfficers } from "./OfficerProvider.js"
 import { OfficerSelect } from "./officers_/OfficerSelect.js"
+import {DisplayFacilitiesButton} from "./facilities_/FacilitiesButton.js"
 
 NoteForm()
 CriminalList ()
@@ -20,4 +21,4 @@ NoteList()
 getCriminalFacilities()
 useCriminalFacilities()
 getFacilities()
-
+DisplayFacilitiesButton()
