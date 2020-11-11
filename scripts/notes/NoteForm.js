@@ -1,4 +1,4 @@
-import { getCriminals, useCriminals } from "../CriminalDataProvider.js"
+import { getCriminals, useCriminals } from "../criminals_/CriminalDataProvider.js"
 import {saveNote} from "./NotesDataProvider.js"
 
 
