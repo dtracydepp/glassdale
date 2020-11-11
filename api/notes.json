@@ -1,13 +1,6 @@
 {
   "notes": [
-    {
-      "dateOfInterview": "2020-11-11",
-      "timestamp": 1605110843512,
-      "author": "TEST",
-      "criminalId": 1,
-      "note": "TEST",
-      "id": 1
-    },
+
     {
       "dateOfInterview": "2020-11-11",
       "timestamp": 1605110934078,
@@ -71,6 +64,6 @@
       "criminalId": 3,
       "note": "TEST",
       "id": 10
-    }
+
   ]
 }
