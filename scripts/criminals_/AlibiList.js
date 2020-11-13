@@ -27,8 +27,8 @@ eventHub.addEventListener("showAssociatesButtonClicked", (eventObj) => {
 }
 
 const render = (criminalObj) => {
-    const contentTarget = document.querySelector(`#criminal-${criminalObj.id}`)
-
+    const contentTarget = document.querySelector(".alibi__list")
+    contentTarget.innerHTML = `<h3>Alibi List</h3>` 
     contentTarget.innerHTML += `
     <div class="alibi__list">
         ${criminalObj.known_associates.map(alibiObj => {
