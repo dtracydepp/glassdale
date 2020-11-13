@@ -1,4 +1,4 @@
-// Get alibis for each criminal and show in a list, not workiing nothing is rendering 11/12/20
+// Get alibis for each criminal and show in a list.
 
 import {useCriminals} from "./CriminalDataProvider.js"
 
