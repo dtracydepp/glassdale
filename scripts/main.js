@@ -11,6 +11,8 @@ import { OfficerList } from "./officers_/OfficerList.js"
 // import { getOfficers, useOfficers } from "./OfficerProvider.js"
 import { OfficerSelect } from "./officers_/OfficerSelect.js"
 import {DisplayFacilitiesButton} from "./facilities_/FacilitiesButton.js"
+import "./criminals_/AlibiList.js"
+import {ablibiEventListener} from "./criminals_/AlibiList.js"
 
 NoteForm()
 CriminalList ()
@@ -22,3 +24,4 @@ getCriminalFacilities()
 useCriminalFacilities()
 getFacilities()
 DisplayFacilitiesButton()
+ablibiEventListener()

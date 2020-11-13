@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".container")
+
 export const Criminal = (criminalObject, facilities) => {
     return `
     <div class="criminal">
@@ -22,3 +24,23 @@ export const Criminal = (criminalObject, facilities) => {
     </div>
     `
 }
+
+
+eventHub.addEventListener("click", (eventObj) => {
+  
+    const [nameOfId, criminalId] = eventObj.target.id.split("--")
+    
+    // check to see if the button that was clicked IS in fact the suspect associates button
+    if(eventObj.target.id.startsWith("associates--")){
+      console.log("button was clicked:", nameOfId, criminalId)
+      // custom event
+      const myCustomEvent = new CustomEvent("showAssociatesButtonClicked", {
+        detail: {
+          criminalId: criminalId
+        }
+      })
+  
+      // dispatched the event
+      eventHub.dispatchEvent(myCustomEvent)
+    }
+  })

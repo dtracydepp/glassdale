@@ -26,8 +26,8 @@ const render = (arrayOfCriminals) => {
 }
 
 eventHub.addEventListener("click", clickEvent => {
-    console.log(clickEvent)
     if(clickEvent.target.id === "saveNote") {
+        console.log(clickEvent)
         const dateOfInterview = document.querySelector("#note--dateOfInterview").value
         const author = document.querySelector("#note--author").value
         const criminalId = parseInt(document.querySelector("#note--criminal").value)
